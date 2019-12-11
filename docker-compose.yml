@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  script:
+    container_name: coursera_example
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - "8002:8002"
+    volumes:
+      - $DIRECTORY:/home
+
